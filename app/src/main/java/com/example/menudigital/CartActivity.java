@@ -63,7 +63,7 @@ public class CartActivity extends AppCompatActivity {
         total=findViewById(R.id.tvTotal);
         myrv =findViewById(R.id.recyclerview_id);
         lstProduct = new ArrayList<>();
-        //int i = 0;
+        //int i = 0; pitopaldany
         btnPedido=findViewById(R.id.btnPedido);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
