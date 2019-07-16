@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_login"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/logo" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/fondo2_login">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:text="LOGIN"
+            android:textAlignment="center"
+            android:textColor="#FBE50C"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginRight="120dp"
+                android:hint="CÓDIGO DE EMPLEADO"
+                android:digits="0123456789"
+                android:inputType="numberPassword"
+                android:textAlignment="center"
+                android:maxLength="4"
+                android:id="@+id/etCodigo"
+                android:imeOptions="actionNext"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/etPin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="120dp"
+                android:hint="PIN DE SEGURIDAD"
+                android:maxLength="4"
+                android:inputType="numberPassword"
+                android:textAlignment="center"
+                android:imeOptions="actionNext"
+                android:textSize="25dp" />
+            <EditText
+                android:id="@+id/etTableta"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="120dp"
+                android:hint="NÚMERO DE TABLETA"
+                android:maxLength="4"
+                android:inputType="numberPassword"
+                android:textAlignment="center"
+                android:imeOptions="actionNext"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/boton_login"
+                android:text="ENTRAR"
+                android:textColor="#FFF"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="30dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

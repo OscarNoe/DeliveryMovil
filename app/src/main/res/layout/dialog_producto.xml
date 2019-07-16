@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:background="@android:color/white">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical"
+
+        android:gravity="bottom">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_margin="25dp"
+            android:background="@drawable/boton_pedido_add"
+            android:layout_weight="10">
+            <ImageView
+                android:id="@+id/ivImagen"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:src="@drawable/producto2"
+                android:background="@drawable/boton_pedido_add"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:fontFamily="serif"
+            android:textColor="@android:color/black"
+            android:textSize="34sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:text="Titulo del platillo"/>
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:fontFamily="serif-monospace"
+            android:textColor="@android:color/black"
+            android:background="@color/colorDesc"
+            android:textSize="24sp"
+            android:ellipsize="end"
+            android:textAlignment="center"
+            android:text="Descripcion del platillo"/>
+
+        <TextView
+            android:id="@+id/tvPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:textColor="@color/colorAdd"
+            android:textSize="30sp"
+            android:ellipsize="end"
+            android:textAlignment="center"
+
+
+            android:text="$ 140"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:background="@drawable/dialog_degradado"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        <!-- ScrollView-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7">
+            <!-- Contenedor de las secciones producto-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Contenedor información-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:elevation="20dp"
+                    android:id="@+id/ivInfo"
+                    android:background="@drawable/arrow_dialog"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="8"
+                        android:gravity="center"
+                        android:text="Información"
+                        android:textAlignment="center"
+                        android:textSize="26sp" />
+
+                    <ImageView
+                        android:id="@+id/downInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="3"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_down" />
+                </LinearLayout>
+                <!-- Contenido información-->
+                <LinearLayout
+                    android:background="@drawable/dialog_btn"
+                    android:id="@+id/contenidoInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat pellentesque faucibus. Phasellus at lacus bibendum, feugiat velit ut, egestas enim. Vestibulum varius finibus dignissim. Vivamus eu viverra tellus. Donec auctor lacinia vehicula. Praesent eget turpis id tellus luctus hendrerit."
+                        />
+                </LinearLayout>
+                <!-- Contenedor ingredientes-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/ivIngre"
+                    android:layout_height="60dp"
+                    android:elevation="10dp"
+                    android:background="@drawable/arrow_dialog"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:gravity="center"
+                        android:text="Ingredientes"
+                        android:textAlignment="center"
+                        android:textSize="26sp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:id="@+id/downIngre"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="3"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_down" />
+
+                </LinearLayout>
+                <!-- Contenido ingredientes-->
+                <LinearLayout
+                    android:id="@+id/contenidoIngre"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/dialog_btn">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat pellentesque faucibus. Phasellus at lacus bibendum, feugiat velit ut, egestas enim. Vestibulum varius finibus dignissim. Vivamus eu viverra tellus. Donec auctor lacinia vehicula. Praesent eget turpis id tellus luctus hendrerit."
+                        />
+                </LinearLayout>
+                <!-- Contenedor complementos-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/ivComple"
+                    android:layout_height="60dp"
+                    android:elevation="10dp"
+                    android:background="@drawable/arrow_dialog"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:gravity="center"
+                        android:text="Complementos"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:id="@+id/downComple"
+                        android:layout_weight="3"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_down"/>
+
+                </LinearLayout>
+                <!-- Contenido complementos-->
+                <LinearLayout
+                    android:id="@+id/contenidoComple"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/dialog_btn"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat pellentesque faucibus. Phasellus at lacus bibendum, feugiat velit ut, egestas enim. Vestibulum varius finibus dignissim. Vivamus eu viverra tellus. Donec auctor lacinia vehicula. Praesent eget turpis id tellus luctus hendrerit."
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/btnPedido"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/boton_pedido_add"
+            android:text="AGREGAR A PEDIDO"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:elevation="10dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

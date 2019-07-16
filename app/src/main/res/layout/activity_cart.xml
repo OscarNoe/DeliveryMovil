@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorToolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="11"
+            android:orientation="vertical"
+            android:gravity="bottom">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:orientation="vertical">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:id="@+id/recyclerview_id">
+                </android.support.v7.widget.RecyclerView>
+
+
+
+                <TextView
+                    android:id="@+id/tvVacio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   android:paddingTop="110dp"
+                    android:text="Su orden está vacía :("
+                    android:textSize="28dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorGris"
+                    android:paddingBottom="110dp"
+                    android:visibility="gone"
+                    android:drawableTop="@drawable/ic_fast_food"
+                    android:fontFamily="serif"
+
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/cart_contenedor_inf"
+                android:layout_weight="1">
+                <TextView
+
+                    android:gravity="center"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:text="Total:"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="32dp"
+                    android:elevation="10dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:id="@+id/tvTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/contenedor_vaciar"
+                    android:layout_weight="3"
+                    android:text="$180"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="32dp"
+                    android:elevation="10dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/ivVaciar"
+                    android:background="@drawable/contenedor_vaciar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:text="Vaciar"
+                    android:textSize="22dp"
+                    android:textColor="@android:color/holo_red_light"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:drawableEnd="@drawable/ic_trash"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/cart_contenedor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="15dp"
+                android:focusableInTouchMode="true"
+                android:layout_weight="5"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvMesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="MESA N2"
+                    android:textSize="32dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    />
+              <!--  <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="6dp"
+                    android:text="Tiempo de espera: 22-26 min."
+                    android:textSize="16dp"
+                    android:textAlignment="center"
+                    /> -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Forma de entrega"
+                    android:textSize="18dp"
+                    android:layout_marginTop="10dp"
+
+                    />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:entries="@array/entregas"></Spinner>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:hint="Agregar nota(Complementos extra, etc)"
+                    android:textSize="18dp"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+
+                    />
+                <EditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:hint="Código promocional"
+                    android:textSize="18dp"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="Total"
+                        android:textSize="23dp"
+
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:text="$225"
+                        android:textSize="23dp"
+
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:text="Método de pago"
+                    android:textSize="18dp"
+
+                    />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textSize="30sp"
+                    android:entries="@array/metodos_pago"></Spinner>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        </ScrollView>
+        <Button
+            android:id="@+id/btnPedido"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/boton_pedido_add"
+            android:text="CONFIRMAR PEDIDO"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:elevation="10dp"
+            android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
